@@ -504,6 +504,9 @@ $(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
     android.hardware.usb.gadget-service.mediatek
+    
+# userdata
+PRODUCT_FS_COMPRESSION := 1
 
 # vndservice
 PRODUCT_PACKAGES += \
@@ -519,6 +522,8 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     libkeystore-wifi-hidl:64 \
     libkeystore-engine-wifi-hidl:64
+
+$(call soong_config_set_bool,wpa_supplicant_8,wifi_disable_multi_akm,true)
 
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor:64 \
