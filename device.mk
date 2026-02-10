@@ -470,7 +470,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
     hardware/mediatek/libaedv \
-    hardware/mediatek/wlan/wifi_hal \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/millennium
@@ -519,8 +518,6 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     libkeystore-wifi-hidl:64 \
     libkeystore-engine-wifi-hidl:64
-
-$(call soong_config_set_bool,wpa_supplicant_8,wifi_disable_multi_akm,true)
 
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor:64 \
