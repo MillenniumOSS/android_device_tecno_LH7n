@@ -319,6 +319,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
 
+PRODUCT_PACKAGES += \
+    EmptyPropsOverlay
+
 # Lineage-Specific Overlays
 PRODUCT_PACKAGES += \
     ApertureOverlay
