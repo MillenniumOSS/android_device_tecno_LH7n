@@ -41,3 +41,6 @@ PERF_ANIM_OVERRIDE := true
 # CPU governor support
 PERF_GOV_SUPPORTED := true
 PERF_DEFAULT_GOV := schedutil
+
+# AxionFX
+TARGET_INCLUDE_AXFX := true
