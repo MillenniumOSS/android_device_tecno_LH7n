@@ -44,3 +44,6 @@ PERF_DEFAULT_GOV := schedutil
 
 # AxionFX
 TARGET_INCLUDE_AXFX := true
+
+# Flashlight strength
+TORCH_STR_SUPPORTED := true
