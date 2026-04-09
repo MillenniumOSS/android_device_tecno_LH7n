@@ -44,3 +44,14 @@ PERF_DEFAULT_GOV := schedutil
 
 # AxionFX
 TARGET_INCLUDE_AXFX := true
+
+# GMS
+TARGET_CORE_GMS := true
+TARGET_CORE_GMS_EXTRAS := true
+PRODUCT_PACKAGES += \
+   LatinIMEGooglePrebuilt \
+   CalendarGooglePrebuilt \
+   GoogleContacts \
+   GoogleDialer \
+   PrebuiltBugle \
+   com.google.android.dialer.support
