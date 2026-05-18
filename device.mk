@@ -472,7 +472,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek/libaedv \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/millennium
+    hardware/millennium \
+    hardware/millennium/libtranlog
 
 # Thermal
 PRODUCT_PACKAGES += \
@@ -496,7 +497,7 @@ PRODUCT_PACKAGES += \
     libutils-v32:64
 
 # USB
-$(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
+$(call soong_config_set_bool,android_hardware_mediatek_usb,audio_accessory_supported,true)
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
     android.hardware.usb.gadget-service.mediatek
