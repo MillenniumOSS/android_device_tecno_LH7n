@@ -99,11 +99,11 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
 
 PRODUCT_PACKAGES += \
+    MtkInCallService
+
+PRODUCT_PACKAGES += \
    vendor.mediatek.hardware.bluetooth.audio@2.1.vendor:64 \
    vendor.mediatek.hardware.bluetooth.audio@2.2.vendor:64
-
-# AudioFX
-TARGET_EXCLUDES_AUDIOFX := true
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -241,9 +241,6 @@ PRODUCT_PACKAGES += \
     init.sensor_2_0.rc \
     ueventd.mt6789.rc
 
-# JamesDSP
-$(call inherit-product-if-exists, vendor/JamesDSP/config.mk)
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.millennium
@@ -377,7 +374,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.pixel-libperfmgr
+    android.hardware.power-service.lineage-libperfmgr
 
 PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mtkpower@1.2-service.stub:64 \
@@ -471,6 +468,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # Shipping API level
+BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 33
 
 # Soong namespaces
@@ -479,8 +477,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
     hardware/mediatek/libaedv \
+    hardware/lineage/interfaces/power-libperfmgr \
     hardware/google/interfaces \
-    hardware/google/pixel \
+    hardware/google/pixel/pixelstats \
+    hardware/google/pixel/power-libperfmgr \
     hardware/millennium \
     hardware/millennium/libtranlog
 
@@ -521,10 +521,10 @@ PRODUCT_PACKAGES += \
    vndservice
 
 # Wi-Fi
+$(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
 PRODUCT_PACKAGES += \
     libwifi-hal-wrapper:64 \
     wpa_supplicant \
-    lib_driver_cmd_mt66xx \
     hostapd \
     android.hardware.wifi-service \
     libkeystore-wifi-hidl:64 \
