@@ -10,6 +10,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
+$(call soong_config_set,update_engine,map_vabc_in_recovery,true)
 
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
@@ -477,6 +478,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
     hardware/mediatek/libaedv \
+    hardware/mediatek/libion_mtk \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/google/interfaces \
     hardware/google/pixel/pixelstats \
@@ -524,6 +526,7 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
 PRODUCT_PACKAGES += \
     libwifi-hal-wrapper:64 \
+    wlan_assistant \
     wpa_supplicant \
     hostapd \
     android.hardware.wifi-service \
