@@ -376,7 +376,6 @@ vendor/lib64/mt6789/libTranGenderDetect.so;SYMLINK=vendor/lib64/libTranGenderDet
 vendor/lib64/mt6789/libTranHumanLight.so;SYMLINK=vendor/lib64/libTranHumanLight.so
 vendor/lib64/mt6789/libTranITDFaceBeauty.so;SYMLINK=vendor/lib64/libTranITDFaceBeauty.so
 vendor/lib64/mt6789/libTranMagicSky.so;SYMLINK=vendor/lib64/libTranMagicSky.so
-vendor/lib64/mt6789/libTranMegHumanEffect.so;SYMLINK=vendor/lib64/libTranMegHumanEffect.so
 vendor/lib64/mt6789/libTranPlatHW.so;SYMLINK=vendor/lib64/libTranPlatHW.so
 vendor/lib64/mt6789/libTranSTPRRepair.so;SYMLINK=vendor/lib64/libTranSTPRRepair.so
 vendor/lib64/mt6789/libTranSTSingleBlur.so;SYMLINK=vendor/lib64/libTranSTSingleBlur.so
@@ -810,7 +809,6 @@ vendor/lib64/libCamera_pbrohi5021qmipiraw_Video_Zoom2.so
 vendor/lib64/libCamera_pbrohi5021qmipiraw_Video_Zoom3.so
 vendor/lib64/libFy-3A-Core.so
 vendor/lib64/libFy-3A-Param.so
-vendor/lib64/libMegviiHum.so
 vendor/lib64/libSQLiteModule_VER_ALL.so
 vendor/lib64/libTranExtImgThread.so
 vendor/lib64/libaibld.so
@@ -845,7 +843,6 @@ vendor/lib64/libfeaturepolicy.so
 vendor/lib64/libimagebuffer_wrapper.so
 vendor/lib64/libimgsensorca.so
 vendor/lib64/libispcameraca.so
-vendor/lib64/libmegface.so
 vendor/lib64/libminiui.so
 vendor/lib64/libmtkcam_3rdparty.thread.so
 vendor/lib64/libmtkcam_fdWarpConvert.so
